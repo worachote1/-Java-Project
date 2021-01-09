@@ -1,10 +1,16 @@
-package com.company;
+      package com.company;
 
-import java.util.Scanner;
+      import org.w3c.dom.ls.LSOutput;
 
-public class Main {
+      import java.util.Scanner;
 
-    public static void main(String[] args) {
+        public class Main {
+
+            public static  int rectangle(int width , int height ) {
+                return width * height ;
+            } /* สร้าง ฟังก์ชั่น การคํษนวณ หา พื้นที่ */
+
+            public static void main(String[] args) {
                 System.out.println("time walker");
                 System.out.println(27);
                 System.out.println("----------------------------------------------------------------");
@@ -18,10 +24,13 @@ public class Main {
 
                 int height = in.nextInt();
                 System.out.println("height คือ " + height);
-                int area = width * height;
+                //int area = width * height;
+                int area = rectangle(width,height) ;
                 System.out.println("area คือ " + area);  }
+
+                
+
         }
 
-        // write your code here
 
 
