@@ -1,36 +1,42 @@
-      package com.company;
+package com.company;
 
-      import org.w3c.dom.ls.LSOutput;
+import java.util.Arrays;
+import java.util.Scanner;
 
-      import java.util.Scanner;
 
-        public class Main {
+public class Main {
+    public static int chula(int pat3,int pat1,int gat){
 
-            public static  int rectangle(int width , int height ) {
-                return width * height ;
-            } /* สร้าง ฟังก์ชั่น การคํษนวณ หา พื้นที่ */
+        return pat3 * 60 + pat1 *20 +gat *20 ;
+    }
+    public static void main(String[] args) {
+        // write your code here
+        Scanner in = new Scanner(System.in);
 
-            public static void main(String[] args) {
-                System.out.println("time walker");
-                System.out.println(27);
-                System.out.println("----------------------------------------------------------------");
+        System.out.print("Enter your pat3 score :");
+        int pat3 = in.nextInt() ;
 
-                Scanner in = new Scanner(System.in);
+        System.out.print("Enter your pat1 score :" );
+        int pat1 = in.nextInt() ;
 
-                System.out.print("width equal to : ");
-                int width = in.nextInt();
-                System.out.println("width คือ " + width);
-                System.out.print("height equal to : ");
+        System.out.print("Enter your gat score :");
+        int gat = in.nextInt();
 
-                int height = in.nextInt();
-                System.out.println("height คือ " + height);
-                //int area = width * height;
-                int area = rectangle(width,height) ;
-                System.out.println("area คือ " + area);  }
-
-                
-
+        if (chula(pat3,pat1,gat)>= 20800){
+            System.out.println("Congrats !!! you can study engineering in Chulalongkorn university" +
+                    "with your TCAS score :"+ chula(pat3,pat1,gat));
         }
 
 
+
+
+        else   {
+            System.out.println( "Your TCAS score is " + chula(pat3,pat1,gat)+" is'nt reached to minimum score...." +
+                    "so keep trying!!!");
+        }
+
+
+        
+    }
+}
 
